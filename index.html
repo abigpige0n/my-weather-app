@@ -21,81 +21,78 @@
 		<link href="src/styles.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <div class="container">
-    <body>
+  <body>
+    <div class="container">
       <div class="weather-app">
-
-      <h1>
-        <i class="fas fa-seedling"></i><id="city"></id>Weather<i
-          class="fas fa-seedling"
-        ></i>
-      </h1>
-
-      <h2>What's it like out?</h2>
-     
-      <form id="search-bar">
-        <div class="row">
-          <div class="col-9">
-            <input
-              class="searchbar"
-              type="search"
-						  placeholder="Search Weather..."
-					    id = "city"
-            />
+        <h1>
+          <i class="fas fa-seedling"></i><id="city"></id>Weather<i
+            class="fas fa-seedling"
+          ></i>
+        </h1>
+        <h2>What's it like out?
+        </h2>
+           <form id="search-bar">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                  class="searchbar"
+                  type="search"
+						      placeholder="Search Weather..."
+                  id = "city"
+                  autocomplete="off"
+                  />
+                </div>
+                <div class="col-3">
+                  <span class="submitbutton">
+                  <input class="submit" 
+                  type="submit" 
+                  value="Search" />
+                  </span>
+                </div>
+              </div>
+            </form>
+          <div class="row" id="today-weather">
+            <div class="col-2"></div>
+            <div class="col-3">
+              <img 
+              src="" 
+              id="icon"
+              alt="clouds"
+              width=150 /> 
+            </div>
+            <div class="col-2">
+              <ul class="basic-stats">
+                <li>
+                  <span class="temp" 
+                  id="temp-now"></span><a 
+                  href="#" id="celsius-link" class="active">°C</a> | <a 
+                  href="#" id="fahrenheit-link">°F</a> 
+                </li>
+                <li id="description"></li>
+                <li id = date></li>
+						    <li id = time>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <ul class="advanced-stats">
+                <li> Humidity: <span id="humidity"></span> % </li>
+                <li> Wind:<span id="wind"> </span> km/h </li>
+              </ul>
+            </div>
+            <div>
+            <h3>
+              <a 
+              href="https://github.com/abigpige0n/my-weather-app"
+              target="_blank">
+              open-source code</a> by Sarah Lefebvre and 
+              <a 
+              href="https://www.netlify.com"
+              target="_blank">hosted by Netlify</a>
+            </h3>
           </div>
-          <div class="col-3">
-            <span class="submitbutton">
-              <input class="submit" type="submit" value="Search" />
-            </span>
-          </div>
         </div>
-        </form>
-        
-
-      <div class="row" id="today-weather">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <img 
-          src="" 
-          id="icon"
-          alt="clouds"
-          width=150 /> 
-        </div>
-        <div class="col-2">
-          <ul class="basic-stats">
-            <li>
-              <span class="temp" 
-              id="temp-now"></span><a 
-              href="#" id="celsius-link" class="active">°C</a> | <a 
-              href="#" id="fahrenheit-link">°F</a> 
-            </li>
-            <li id="description">
-            </li>
-            <li id = date>
-						</li>
-						<li id = time>
-            </li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <ul class="advanced-stats">
-            <li> Humidity: <span id="humidity"></span> % </li>
-            <li> Wind:<span id="wind"> </span> km/h </li>
-          </ul>
-        </div>
-      <div>
-        <small>
-          <a 
-        href="https://github.com/abigpige0n/my-weather-app"
-        target="_blank">
-        open-source code</a> by Sarah Lefebvre and 
-        <a 
-        href="https://www.netlify.com"
-        target="_blank">hosted by Netlify</a>
-        </small>
-        </div>
-      <script src="src/index.js"></script>
+      </div>
+        <script src="src/index.js"></script>
     </body>
-    
-  </div>
-</html>
+  </html>
