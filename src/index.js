@@ -38,7 +38,13 @@ function formatDate(date) {
 formatDate(now);
 
 let currentHours = now.getHours();
+if (currentHours < 10) {
+  currentHours = `0${currentHours}`;
+}
 let currentMinutes = now.getMinutes();
+if (currentMinutes <10) {
+  currentMinutes = `0${currentMinutes}`
+}
 
 function formatTime(date) {
   let timeNow = document.querySelector("#time");
@@ -54,6 +60,7 @@ function showTemp(response) {
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
