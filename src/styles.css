@@ -16,6 +16,7 @@ h1 {
   font-size: 50px;
   color: #f58e85;
   padding: 10px;
+  text-transform: capitalize;
 }
 
 h2 {
