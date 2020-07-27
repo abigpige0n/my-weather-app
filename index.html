@@ -26,7 +26,7 @@
       <div class="weather-app">
 
       <h1>
-        <i class="fas fa-seedling"></i><id="search-text-input"></id>Weather<i
+        <i class="fas fa-seedling"></i><id="city"></id>Weather<i
           class="fas fa-seedling"
         ></i>
       </h1>
@@ -34,22 +34,23 @@
       <h2>What's it like out?</h2>
      
       <form id="search-bar">
-      <div class="row">
-        <div class="col-9">
-          <input
-            class="searchbar"
-            type="search"
-						placeholder="Search Weather..."
-					 id = "search-text-input"
-          />
+        <div class="row">
+          <div class="col-9">
+            <input
+              class="searchbar"
+              type="search"
+						  placeholder="Search Weather..."
+					    id = "city"
+            />
+          </div>
+          <div class="col-3">
+            <span class="submitbutton">
+              <input class="submit" type="submit" value="Search" />
+            </span>
+          </div>
         </div>
         </form>
-        <div class="col-3">
-          <span class="submitbutton">
-            <input class="submit" type="submit" value="Search" />
-          </span>
-        </div>
-      </div>
+        
 
       <div class="row" id="today-weather">
         <div class="col-2"></div>
@@ -63,7 +64,10 @@
         <div class="col-2">
           <ul class="basic-stats">
             <li>
-              <span class="temp" id="temp-now"></span><a href="#" id="celsius">°C</a> | <a href="#" id="farenheit">°F</a> 
+              <span class="temp" 
+              id="temp-now"></span><a 
+              href="#" id="celsius-link" class="active">°C</a> | <a 
+              href="#" id="fahrenheit-link">°F</a> 
             </li>
             <li id="description">
             </li>

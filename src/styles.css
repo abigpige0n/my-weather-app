@@ -33,8 +33,8 @@ h6 {
 .searchbar {
   font-family: "Yanone Kaffeesatz", sans-serif;
   display: block;
-  margin: 0 auto;
-  width: 600px;
+  margin: 0px auto;
+  width: 500px;
   padding-left: 20px;
   border-radius: 8px;
   border-color: #f58e85;
@@ -95,4 +95,13 @@ ul {
 .day-5-img {
   display: block;
   margin: 0 auto;
+}
+
+.col-2 .active {
+  color: black;
+  cursor: default;
+}
+
+.col-2 .active:hover {
+  text-decoration: none;
 }
