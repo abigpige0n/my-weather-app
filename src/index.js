@@ -1,14 +1,3 @@
-function searchWeather(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#city");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `<i class="fas fa-seedling"></i>${
-    searchInput.value
-  } Weather<i class="fas fa-seedling"></i>`;
-}
-
-let clickSearch = document.querySelector("#search-bar");
-clickSearch.addEventListener("submit", searchWeather);
 
 let now = new Date();
 let days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
@@ -75,12 +64,20 @@ function showTemp(response) {
 celsiusTemp = response.data.main.temp;
 }
 
-function citySearch(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city").value;
+function search(city) {
   let apiKey = "e97a29dafab1111956594c069c61f40c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemp);
+}
+
+function citySearch(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city");
+  search(cityInputElement.value);
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `<i class="fas fa-seedling"></i>${
+    cityInputElement.value
+  } Weather<i class="fas fa-seedling"></i>`;
 }
 
 function showfahrenheitTemp(event) {
@@ -109,3 +106,5 @@ fahrenheitlink.addEventListener("click", showfahrenheitTemp);
 
 let celsiuslink=document.querySelector("#celsius-link");
 celsiuslink.addEventListener("click", showcelsiusTemp);
+
+search("Toronto");
